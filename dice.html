@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="dice.css">
+  </head>
+
+  <body>
+
+    <!-- <p id="dice_agg_0">
+    </p> -->
+
+    <table>
+      <tr>
+        <td id= "dice_agg_0" class= "dice_agg">6</td>
+        <td id= "dice_agg_1" class= "dice_agg">6</td>
+        <td id= "dice_agg_2" class= "dice_agg">6</td>
+        <td id= "dice_def_0" class= "dice_def">6</td>
+        <td id= "dice_def_1" class= "dice_def">6</td>
+      </tr>
+      <tr>
+        <td><input id="submit_agg_0" type="submit" value="Roll Dice"></td>
+        <td><input id="submit_agg_1" type="submit" value="Roll Dice"></td>
+        <td><input id="submit_agg_2" type="submit" value="Roll Dice"></td>
+        <td><input id="submit_def_0" type="submit" value="Roll Dice"></td>
+        <td><input id="submit_def_1" type="submit" value="Roll Dice"></td>
+      </tr>
+    </table>
+
+    <!-- <input id="submit_agg_0" type="submit" value="Roll Dice"> -->
+
+    <script>
+      document.getElementById("submit_agg_0").onclick = function() {
+        rollDice(0, true)
+      };
+      document.getElementById("submit_agg_1").onclick = function() {
+        rollDice(1, true)
+      };
+      document.getElementById("submit_agg_2").onclick = function() {
+        rollDice(2, true)
+      };
+      document.getElementById("submit_def_0").onclick = function() {
+        rollDice(0, false)
+      };
+      document.getElementById("submit_def_1").onclick = function() {
+        rollDice(1, false)
+      };
+
+      function rollDice(j, aggressor) {
+        var result = Math.floor((Math.random() * 6) + 1);
+        var text = "dice_agg_" + j.toString();
+        if (aggressor == false) {
+          text = "dice_def_" + j.toString();
+        }
+        document.getElementById(text).innerHTML = result;
+        // document.getElementById(text).innerHTML = text;
+      }
+    </script>
+
+    <br />
+
+    <img src= "https://upload.wikimedia.org/wikipedia/commons/a/aa/Risk_game_map_fixed.png" width= 100%>
+
+  </body>
+</html>

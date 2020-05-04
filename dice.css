@@ -1,0 +1,48 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+#submit {
+  background-color: rgb(200, 100, 100);
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  text-transform: uppercase;
+  width: 200px;
+  cursor: pointer;
+}
+
+.dice_agg {
+  height: 300px;
+  width: 300px;
+  padding: 10px;
+  margin: 10px auto;
+  border: 2px solid gray;
+  border-radius: 5px;
+  font-size: 160px;
+  background-color: #ff0000;
+  color: #000000;
+}
+
+.dice_def {
+  height: 300px;
+  width: 300px;
+  padding: 10px;
+  margin: 10px auto;
+  border: 2px solid gray;
+  border-radius: 5px;
+  font-size: 160px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+#output {
+  height: 100px;
+  width: 100px;
+  padding: 50px;
+  margin: 50px auto;
+  border: 2px solid gray;
+  border-radius: 5px;
+  font-size:80px;
+}
